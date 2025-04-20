@@ -1,15 +1,14 @@
-import React from "react";
-import "../src/index.css";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Services from "./components/Services";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-blue-600 underline">
-        Tailwind is Working!
-      </h1>
-
-      <div className="bg-red-500 p-10 text-white">Tailwind Test</div>
-    </div>
+    <main className="overflow-x-hidden antialiased text-neutral-800">
+      <Navbar />
+      <Hero />
+      <Services />
+    </main>
   );
 };
 
