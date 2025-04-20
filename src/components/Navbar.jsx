@@ -45,7 +45,7 @@ const Navbar = () => {
           {LINKS.map((link, index) => (
             <a
               key={index}
-              href={(link, link)}
+              href={link.href}
               className="uppercase text-sm font-medium"
             >
               {link.name}
@@ -54,9 +54,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden absolute bg-neutral-50 w-full py-5 px-4 mt-2 border-b-4`}>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:hidden absolute bg-neutral-50 w-full py-5 px-4 mt-2 border-b-4`}
+      >
         {LINKS.map((link, index) => (
-          <a key={index} href={link.link} className="uppercase text-lg font-medium block py-2 tracking-wide">
+          <a
+            key={index}
+            href={link.href}
+            className="uppercase text-lg font-medium block py-2 tracking-wide"
+          >
             {link.name}
           </a>
         ))}
